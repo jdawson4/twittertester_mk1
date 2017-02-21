@@ -1,9 +1,11 @@
 import twitter
 
-api = twitter.Api(consumer_key = '6rynAmuYoHR5Lb63uX5CqDLri',
+api = twitter.Api(consumer_key = '',
 	consumer_secret = '',
 	access_token_key = '',
 	access_token_secret = '')
 
-statuses = api.GetUserTimeline(twitter.user)
+user = "pizzahut"
+
+statuses = api.GetUserTimeline(screen_name = user)
 print([s.text for s in statuses])
