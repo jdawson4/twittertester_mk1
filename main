@@ -1,0 +1,9 @@
+import twitter
+
+api = twitter.Api(consumer_key = '6rynAmuYoHR5Lb63uX5CqDLri',
+	consumer_secret = '0eJzlBAd8sFFmFTlqXgC9W0sTiH21qHj5Qmlqw0kYza9HwFyo6',
+	access_token_key = '720054256213049344-mjRtmVfxmR35obfMrIyiUiy1wK3pATk',
+	access_token_secret = '44amjrGc38JB4rrFmwM4j7o1P5j55jMyR9KRTCS3tOuH3')
+
+statuses = api.GetUserTimeline(twitter.user)
+print([s.text for s in statuses])
